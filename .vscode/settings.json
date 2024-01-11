@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ProjectBoost.sln"
+    "dotnet.defaultSolution": "Last-Night-on-Earth.sln"
 }
