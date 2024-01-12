@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
-{ 
-    public void OnButtonClicked()
-    {
 
-    }
+
+public class ButtonEvent_Space : MonoBehaviour
+{
+
+     
+        
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,9 +21,13 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            OnButtonClicked();
-        }   
+            GetComponent<Image>().color = Color.gray;
+        }
+        else
+        {
+            GetComponent<Image>().color = Color.white;
+        }
     }
 
-  
+
 }
