@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -18,11 +19,14 @@ public class CollisionHandler : MonoBehaviour
     bool hasCollisionParticlePlaying = false;
     GameObject sparksEffect;
     GameObject crashEffect;
+    GameObject HP;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         sparksEffect = GameObject.Find("SparksEffect");
         crashEffect = GameObject.Find("Rocket");
+        HP = GameObject.Find("HP");
+        HP.GetComponent<RawImage>().material.color = Color.white;
     }
     void Update()
     {
@@ -84,6 +88,7 @@ public class CollisionHandler : MonoBehaviour
         }
         if (durability <= 0) // Rocket be destoyed explicitly
         {
+            HP.GetComponent<RawImage>().material.color = Color.red;
             isTransitioning = true;
             GetComponent<Movement>().enabled = false;
             ShipwreckEffect();
@@ -91,6 +96,8 @@ public class CollisionHandler : MonoBehaviour
         }
         else // Rocket got the damage
         {
+            HP.GetComponent<RawImage>().material.color = Color.yellow;
+            
             crashEffect.GetComponent<Crash>().AudioPlay();
         }
     }
