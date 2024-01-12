@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,14 +20,18 @@ public class CollisionHandler : MonoBehaviour
     bool hasCollisionParticlePlaying = false;
     GameObject sparksEffect;
     GameObject crashEffect;
+    GameObject wizardSphere;
+    GameObject wizardWall;
+    GameObject wizardWallMoved;
     GameObject HP;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         sparksEffect = GameObject.Find("SparksEffect");
         crashEffect = GameObject.Find("Rocket");
+
         HP = GameObject.Find("HP");
-        HP.GetComponent<RawImage>().material.color = Color.white;
+        HP.GetComponent<RawImage>().color = Color.white;
     }
     void Update()
     {
@@ -54,6 +59,9 @@ public class CollisionHandler : MonoBehaviour
 
             }
         }
+    }
+    void OnTriggerEnter(Collider other) {
+
     }
     private void CollisionEffectEvent()
     {
@@ -88,7 +96,7 @@ public class CollisionHandler : MonoBehaviour
         }
         if (durability <= 0) // Rocket be destoyed explicitly
         {
-            HP.GetComponent<RawImage>().material.color = Color.red;
+            HP.GetComponent<RawImage>().color = Color.red;
             isTransitioning = true;
             GetComponent<Movement>().enabled = false;
             ShipwreckEffect();
@@ -96,7 +104,7 @@ public class CollisionHandler : MonoBehaviour
         }
         else // Rocket got the damage
         {
-            HP.GetComponent<RawImage>().material.color = Color.yellow;
+            HP.GetComponent<RawImage>().color = Color.yellow;
             
             crashEffect.GetComponent<Crash>().AudioPlay();
         }
