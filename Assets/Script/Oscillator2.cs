@@ -7,11 +7,10 @@ public class Oscillator2 : MonoBehaviour
 {
     public iTween.EaseType easeType;
     public iTween.LoopType loopType;
-    bool flag = true;
     void Update()
     {
         //  Rotate();
-        iTween.RotateTo(this.gameObject, iTween.Hash("z", 180, "time", 3.0f, "easetype", easeType, "looptype", loopType));
+        iTween.RotateTo(this.gameObject, iTween.Hash("z", 180, "time", 4.0f, "easetype", easeType, "looptype", loopType));
     }
 
     // private void Rotate()

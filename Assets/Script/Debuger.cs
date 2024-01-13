@@ -22,6 +22,11 @@ public class Debuger : MonoBehaviour
             Debug.Log("Load Prev Scene");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Load Current Scene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         else if (Input.GetKeyDown(KeyCode.C))
         {
             collisionHandler.CollisionHandlerControl();

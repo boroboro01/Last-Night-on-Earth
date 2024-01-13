@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -29,6 +30,7 @@ public class CollisionHandler : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         sparksEffect = GameObject.Find("SparksEffect");
         crashEffect = GameObject.Find("Rocket");
+        wizardWall =  GameObject.Find("WizardWall");
 
         HP = GameObject.Find("HP");
         HP.GetComponent<RawImage>().color = Color.white;
@@ -61,7 +63,8 @@ public class CollisionHandler : MonoBehaviour
         }
     }
     void OnTriggerEnter(Collider other) {
-
+        wizardWall.GetComponent<WizardWall>().Wizard();
+        Destroy(other.gameObject);
     }
     private void CollisionEffectEvent()
     {
