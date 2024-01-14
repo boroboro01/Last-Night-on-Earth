@@ -1201,7 +1201,7 @@ MonoBehaviour:
 
 
 
-    SOOJUNG HAN
+    SUJEONG HAN
 
 
 
@@ -3815,7 +3815,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.1971851, y: -0.071413435, z: 0.014403502, w: 0.97765577}
+  m_LocalRotation: {x: 0.19718508, y: -0.07141347, z: 0.014403506, w: 0.9776557}
   m_LocalPosition: {x: 4.699997, y: 23.600002, z: -32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5497,7 +5497,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480353448}
-  m_LocalRotation: {x: 0.1971851, y: -0.071413435, z: 0.014403502, w: 0.97765577}
+  m_LocalRotation: {x: 0.19718508, y: -0.07141347, z: 0.014403506, w: 0.9776557}
   m_LocalPosition: {x: 0.14887714, y: 13.658012, z: -59.10691}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
