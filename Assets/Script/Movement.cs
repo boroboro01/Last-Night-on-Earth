@@ -26,11 +26,6 @@ public class Movement : MonoBehaviour
     }
     void ProcessThrust()
     {
-        StartThrusting();
-    }
-
-    private void StartThrusting()
-    {
         if (Input.GetKey(KeyCode.Space))
         {
             RocketRigidbody.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
