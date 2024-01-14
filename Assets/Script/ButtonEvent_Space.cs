@@ -25,8 +25,9 @@ public class ButtonEvent_Space : MonoBehaviour
         }
         else
         {
-            GetComponent<Image>().color = Color.white;
+            GetComponent<Image>().color = new Color(255/255f, 255/255f, 255/255f, 50/255f);
         }
+
     }
 
 

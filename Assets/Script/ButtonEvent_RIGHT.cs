@@ -14,13 +14,14 @@ public class ButtonEvent_RIGHT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
             GetComponent<Image>().color = Color.gray;
         }
         else
         {
-            GetComponent<Image>().color = Color.white;
+            GetComponent<Image>().color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 50 / 255f);
         }
     }
 }
