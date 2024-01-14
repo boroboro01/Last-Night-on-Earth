@@ -111,6 +111,10 @@ public class CollisionHandler : MonoBehaviour
 
         int nextSceneIndex = SetSceneIndex();
         StartLoadNextScene(waitTime, nextSceneIndex);
+
+        if (nextSceneIndex > PlayerPrefs.GetInt("levelAt")) {
+            PlayerPrefs.SetInt("levelAt", nextSceneIndex);
+        }
     }
 
     private void FinishEffect()
